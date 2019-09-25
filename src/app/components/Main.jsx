@@ -12,8 +12,7 @@ export const Main = () => (
     <Router history={history}>
         <Provider store={store}>
         <div> 
-            { <ConnectedNavigation />}
-            {/* <ConnectedDashboard/> */}
+            <ConnectedNavigation />
             <Route exact 
                     path="/dashboard"
                     render={ ()=>(<ConnectedDashboard/>)}
@@ -25,4 +24,4 @@ export const Main = () => (
         </div>
         </Provider>
     </Router>
-)
+);
