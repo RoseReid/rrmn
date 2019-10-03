@@ -12,15 +12,14 @@ export const Main = () => (
     <Router history={history}>
         <Provider store={store}>
         <div> 
-            { <ConnectedNavigation />}
-            {/* <ConnectedDashboard/> */}
+            <ConnectedNavigation />
             <Route exact 
                     path="/dashboard"
-                    render={ ()=>(<ConnectedDashboard/>)}
+                    render={()=> (<ConnectedDashboard/>)}
                     />
               <Route exact 
                     path="/task/:id"
-                    render={ ({match})=>(<ConnectTaskDetail match={match}/>)}
+                    render={({match})=>(<ConnectTaskDetail match={match}/>)}
                     />
         </div>
         </Provider>
